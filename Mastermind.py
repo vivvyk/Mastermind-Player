@@ -50,7 +50,7 @@ def knuth(guess, answer):
             hitcount = 0
             for code_2 in S:
                 (code_correct, code_transposed) = u.evaluate_guess(code_1, code_2)
-                if (correct,transposed) != tuple(pegComb): #For the current peg configuration, this code will be deleted from S. We increase hitcount.
+                if (code_correct,code_transposed) != tuple(pegComb): #For the current peg configuration, this code will be deleted from S. We increase hitcount.
                     hitcount += 1
             hitcounts.append(hitcount)
 
@@ -83,7 +83,7 @@ if __name__ == "__main__":
 
      #STEP 2: Initial guess must always be [1,1,2,2]
     initial_guess = [1,1,2,2]
-    secret_code = [1,2,3,4] #The secret code
+    secret_code = [6,5,6,5] #The secret code
 
     #STEPS 3-7
     knuth(initial_guess,secret_code)
