@@ -49,7 +49,7 @@ def knuth(guess, answer):
         while pegComb[0] != len(guess):
             hitcount = 0
             for code_2 in S:
-                (correct, transposed) = u.evaluate_guess(code_1, code_2)
+                (code_correct, code_transposed) = u.evaluate_guess(code_1, code_2)
                 if (correct,transposed) != tuple(pegComb): #For the current peg configuration, this code will be deleted from S. We increase hitcount.
                     hitcount += 1
             hitcounts.append(hitcount)
