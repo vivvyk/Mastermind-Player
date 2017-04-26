@@ -65,7 +65,7 @@ def knuth(guess, answer):
                 continue
             pegComb[1] += 1
 
-        score_array.append(min(hitcounts)) #The minimum hitcount of each peg configuration for a guess becomes the "score" of the guess. We append the minimum score to score_array.
+        score_array.append(min(hitcounts)) #The minimum of the hitcounts of each peg configuration for a guess becomes the "score" of the guess. We append the score to score_array.
 
     guess_index = np.argmax(score_array) #Find the index of the maxiumum score.
     next_guess = S_guessSet[guess_index] #S_guessSet is indexed similarly; we choose the code associated with the maxium score.
