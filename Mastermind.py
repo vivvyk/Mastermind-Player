@@ -59,7 +59,7 @@ def knuth(guess, answer):
                 pegComb[0] += 1
                 pegComb[1] = 0
                 continue
-            if pegComb[1] + 1 > len(guess): #The peg configuration numbers cannot breach 4.
+            if pegComb[1] + 1 > len(guess): #The peg configuration numbers cannot be greater than 4.
                 pegComb[0] += 1
                 pegComb[1] = 0
                 continue
