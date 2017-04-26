@@ -18,7 +18,7 @@ def evaluate_guess(guess, code):
 
     # Reduce the guess and the code by removing the correct positions.
     # Create the set values that are common between the two reduced lists.
-    reduced_guess = [guess[i] for i in incorrect_positions] 
+    reduced_guess = [guess[i] for i in incorrect_positions]
     reduced_code = [code[i] for i in incorrect_positions]
     reduced_set = set(reduced_guess) & set(reduced_guess)
 
@@ -40,6 +40,3 @@ if __name__ == "__main__":
     print("secret code: "+ str(secret_code))
     print("guess: " + str(guess))
     print(str(num_correct) + " black peg(s) and " + str(num_transposed) + " white peg(s)")
-
-
-
